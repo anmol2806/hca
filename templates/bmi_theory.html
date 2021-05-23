@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block title %}BMI Page{% endblock %}
+
+{% block content %}
+<style>
+div.ex2 {
+  
+  padding: 25px;
+  
+}
+div.ex3 {
+	background-image:url("{{ url_for('static', filename='background_1.jpg') }}");
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+#responsive-image {  width: 80%;  height: auto; } 
+#responsive-image1 {  width: 100%; max-height:200px;  height:auto}
+
+
+
+
+</style>
+<div >
+<img src="/static/home_bmi.jpg" id="responsive-image1">
+</div>
+<div class="ex3">
+
+<div class="ex2" style="font-size:20px";>
+<p style="font-size:40px"><b>What Is Body Mass Index?</b></p>
+Body mass index (BMI) is an estimate of body fat based on height and weight.It doesn’t measure body fat directly, but instead uses an equation to make an approximation. BMI can help determine whether a person is at an unhealthy or healthy weight.
+<br>
+A high BMI can be a sign of too much fat on the body, while a low BMI can be a sign of too little fat on the body. The higher a person’s BMI, the greater their chances of developing certain serious conditions, such as heart disease, high blood pressure, and diabetes. A very low BMI can also cause health problems, including bone loss, decreased immune function, and anemia.
+<br>
+While BMI can be useful in screening children and adults for body weight problems, it does have its limits. BMI may overestimate the amount of body fat in athletes and other people with very muscular bodies. It may also underestimate the amount of body fat in older adults and other people who have lost muscle mass.
+<br>
+<p style="font-size:40px"><b>Body Mass Index Formula</b><br></p>
+BMI is calculated by dividing a person’s weight by the square of their height.
+
+
+<div class="css-0">
+
+<span style="font-size:0;line-height:0"></span>
+<h2><div>Understanding the results</div></h2>
+<p>The following table shows standard weight status categories associated with BMI ranges for adults.</p>
+<table class="table table-bordered">
+<thead>
+		<tr>
+		<th>BMI</th>
+		 <th>Weight status</th>
+		 </tr>
+		 </thead>
+			<tbody>
+			<tr><td class="left" style="width:20%;">Below 18.5</td>
+				<td class="left" style="width:20%;background-color:#ffff66;">Underweight</td></tr>
+				<tr><td class="left">18.5–24.9</td>
+				<td class="left" style="background-color:#ccffcc;">Healthy</td></tr>
+				<tr><td class="left">25.0–29.9</td>
+				<td class="left" style="background-color:#ffddbb;">Overweight</td></tr>
+				<tr><td class="left">30.0 and above</td>
+				<td class="left" style="background-color:#ffaaaa;">Obese</td></tr>
+				</tbody>
+				</table>
+					<div id="#advice1" class="whitebox" style="background-color:#ffff66"><strong>BMI of less than 18.5</strong><p></p><p>A BMI of less than 18.5 indicates that you are underweight, so you may need to put on some weight. You are recommended to ask your doctor or a dietitian for advice.</p><p></p></div><div id="#advice2" class="whitebox" style="background-color:#ccffcc;margin-top:2px"><strong>BMI of 18.5–24.9</strong><p></p><p>A BMI of 18.5-24.9 indicates that you are at a healthy weight for your height. By maintaining a healthy weight, you lower your risk of developing serious health problems.</p><p></p></div><div id="#advice3" class="whitebox" style="background-color:#ffddbb;margin-top:2px"><strong>BMI of 25–29.9</strong><p></p><p>A BMI of 25-29.9 indicates that you are slightly overweight. You may be advised to lose some weight for health reasons. You are recommended to talk to your doctor or a dietitian for advice.</p><p></p></div><div id="#advice4" class="whitebox" style="background-color:#ffaaaa;margin-top:2px;margin-bottom:20px"><strong>BMI of over 30</strong><p></p><p>A BMI of over 30 indicates that you are heavily overweight. Your health may be at risk if you do not lose weight. You are recommended to talk to your doctor or a dietitian for advice.</p><p></p></div><div class="css-20w1gi"><aside class="css-0"><div><div class="css-1sq15os"><div class="css-1hjaa0k"><span class="css-7mq29v bt-uid-tg" data-uid="5ac2690fe0-160"></span></div><div id="inline1__slot" data-adbridg-ad-class="inline1" data-ad="true" class="css-1qo24qk" data-google-query-id="CIa0k-Sux_ACFXNHfAodRmIEjQ"><div id="google_ads_iframe_/4788/mnt/pagenumber1/DLB2_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/4788/mnt/pagenumber1/DLB2_0" title="3rd party ad content" name="google_ads_iframe_/4788/mnt/pagenumber1/DLB2_0" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="conversion-measurement 'src'" style="border: 0px; vertical-align: bottom;" data-google-container-id="3" data-load-complete="true"></iframe></div></div></div></div></aside></div></div>
+<img src="/static/bmi_1.jpg" id="responsive-image">
+<div class="css-0">
+<span style="font-size:0;line-height:0"></span>
+<h2><div>Health risks of extra weight</div></h2>
+<p>Excess weight has the following effects on the body:</p>
+<ul>
+	<li>It increases how hard the heart has to work.</li>
+	<li>It raises blood cholesterol and triglyceride levels.</li>
+	<li>It lowers high-density lipoprotein (HDL), or good cholesterol levels.</li>
+	<li>It can make diabetesand other health problems more likely.</li>
+	</ul>
+
+<h2>Body Mass Index Prediction</h2>
+	<h3>Predict the Body Mass Index </h3>
+            
+   
+      <table>
+		<tr><td> Name
+			<td>  <input type=string name="name"  placeholder="Name " >
+        </tr>
+		<form action="{{ url_for('predict3')}}" method="post">
+        <tr><td> Gender 
+            <td>  <input  name="gender" type=radio   value=0> Male <input  name="gender" type=radio   value=1> Female
+		</tr>
+		<tr><td> Height
+			<td>  <input type=number name="height"  placeholder="Height (in inches) " >
+        </tr>
+		<tr><td> Weight
+			<td>  <input type=number name="weight"  placeholder="Weight (in Kgs) " >
+        </tr>
+		
+		
+        <tr>
+		<td colspan=2 align=center><br><button type="submit">Predict BMI</button>
+		</tr>
+	  </table>
+    </form>
+       
+     <br> {{pred}}<br>  
+</div>
+  </div>
+   
+   
+ {% endblock %}

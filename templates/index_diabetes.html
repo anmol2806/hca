@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+
+{% block title %} 
+Diabetes
+{% endblock %}
+
+
+{% block content %}
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+<style>
+div.ex11 {
+	background-image:url("{{ url_for('static', filename='diabetes_2.jpg') }}");
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+   padding: 15px;
+}
+
+.left {
+  width: 75%;
+}
+
+.right {
+  width: 15%;
+}
+#responsive-image1 {  width: 80%;  height: auto; } 
+#responsive-image {  width: 100%;  max-height:200px; height:auto}
+
+
+
+
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+tbody tr:nth-child(even)
+{
+  background: #8cff66;
+}
+tbody tr:nth-child(odd)
+{
+  background:#339966;
+}
+
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+table, th, td {
+
+  border: 1px solid black;
+}
+
+
+
+
+</style>
+<div >
+<img src="/static/home_diabetes_4.jpg" id="responsive-image">
+</div>
+
+<div class="ex11">
+
+<div class="row">
+<div class="col-md-8">
+<h2>What is Diabetes?</h2>
+<p>Diabetes is a disease that occurs when your blood glucose, also called blood sugar, is too high. 
+Blood glucose is your main source of energy and comes from the food you eat. 
+Insulin, a hormone made by the pancreas, helps glucose from food get into your cells to be used for energy. 
+Sometimes your body doesn’t make enough—or any—insulin or doesn’t use insulin well. 
+Glucose then stays in your blood and doesn’t reach your cells.</p>
+
+<img src="/static/diabetes_1.jpg", id="responsive-image1">
+
+<h2>What health problems can people with diabetes develop?</h2>
+<p>Over time, high blood glucose leads to problems such as<br>
+<li>heart disease</li>
+<li>stroke</li>
+<li>kidney disease</li>
+<li>eye problems</li>
+<li>dental disease</li>
+<li>nerve damage</li>
+<li>foot problems</li></p>
+
+
+</div>
+</div>
+
+</div>
+ <div class="login" >
+	<h1>Diabetes Predictor</h1>
+
+     
+    <form action="{{ url_for('predict2')}}"method="post">
+	<table class="table table-dark">
+		<tr><td> Pregnancies</td><td>	
+			<input type="text" name="Pregnancies" placeholder="Pregnancies" required="required" /></td></tr>
+	
+		<tr><td> Glucose Level</td><td>
+			<input type="text" name="Glucose Level" placeholder="Glucose Level" required="required" /></td></tr>
+		
+		<tr><td> BloodPressure</td><td>
+			<input type="text" name="BloodPressure" placeholder="BloodPressure" required="required" /></td></tr>
+		
+		<tr><td> Insulin</td><td>
+			<input type="text" name="Insulin" placeholder="Insulin" required="required" /></td></tr>
+		
+        <tr><td> BMI</td><td>
+			<input type="text" name="BMI" placeholder="BMI" required="required" /></td></tr>
+        
+		<tr><td> Age</td><td>
+			<input type="text" name="Age" placeholder="Age" required="required" /></td></tr>
+		</table>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ 
+</div>
+
+
+{% endblock %}
+

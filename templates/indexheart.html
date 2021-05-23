@@ -1,0 +1,258 @@
+{% extends "base.html" %}
+
+{% block title %}Heart Disease{% endblock %}
+
+{% block content %}
+
+<style>
+
+
+div.ex3 {
+	background-image:url("{{ url_for('static', filename='10766561.jpg') }}");
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+div.ex6 {
+	background-image:url("{{ url_for('static', filename='background_6.jpg') }}");
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+div.ex2 {
+  
+  padding: 15px;
+  
+}
+.right {
+  width: 50%;
+}
+#responsive-image {  width: 100%;  height: auto; }
+</style>
+
+<img src="/static/home_main1.jpg" id="responsive-image">
+
+
+
+<div class="ex2 ex3" style="color: white">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+
+
+<h1 style="font-size:60px";> Everything You Need to Know About Heart Disease</h1>
+<br>
+
+<h2 style="font-size:40px";> Who gets heart disease?</h2>
+
+<p style="font-size:20px";>
+Heart disease is the leading cause of death in the United States, according to the Centers for Disease Control and Prevention (CDC)Trusted Source. In the United States, 1 in every 4 deaths in is the result of a heart disease. That’s about 610,000 people who die from the condition each year.
+<br>
+Heart disease doesn’t discriminate. It’s the leading cause of death for several populations, including white people, Hispanics, and Black people. Almost half of Americans are at risk for heart disease, and the numbers are rising. Learn more about the increase in heart disease rates.
+<br>
+While heart disease can be deadly, it’s also preventable in most people. By adopting healthy lifestyle habits early, you can potentially live longer with a healthier heart.
+</p>
+<br></p>
+
+<a href="/heartdata"> <b>Dataset used</b></a>
+<br>
+
+<h2 style="font-size:40px";> Parameters required to predict</h2>
+
+
+<p>
+	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+		Chest Pain(cp)  </a>
+		<div class="collapse" id="collapseExample">
+			<div class="card card-body">
+				cp - chest pain type (1 = typical angina; 2 = atypical angina; 3 = non-anginal pain; 4 = asymptomatic)
+				<li>Typical angina (TA) is defined as substernal chest pain precipitated by physical exertion or emotional stress and relieved with rest or nitroglycerin. Women and elderly patients are usually have atypical symptoms both at rest and during stress, often in the setting of nonobstructive coronary artery disease (CAD)</li>
+				<li>Non-anginal chest pain (NACP) is a term used to describe chest pain that resembles heart pain (also called angina) in patients who do not have heart disease. The pain typically is felt behind the breast bone (sternum) and is described as oppressive, squeezing or pressure-like. It may radiate to the neck, left arm or the back (the spine). It may be precipitated by food intake. It lasts variable periods of time and it is not unusual for it to last hours. </li>
+				<li> Asymptomatic means neither causing nor exhibiting symptoms of disease.</li>
+		  	</div>
+		</div>
+</p>
+
+<p>
+	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
+		trestbps  </a>
+		<div class="collapse" id="collapseExample1">
+			<div class="card card-body">
+				resting blood pressure (in mm Hg on admission to the hospital)<br>
+				<b>Blood Pressure Levels</b>
+				Normal	systolic: less than 120 mm Hg diastolic: less than 80 mm Hg<br>
+				At Risk (prehypertension)	systolic: 120–139 mm Hg diastolic: 80–89 mm Hg<br>
+				High Blood Pressure (hypertension)	systolic: 140 mm Hg or higher diastolic: 90 mm Hg or higher
+			</div>
+		</div>
+</p>
+
+
+
+<p>
+	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
+			Serum cholesterol in mg/dl  </a>
+		<div class="collapse" id="collapseExample2">
+			<div class="card card-body">
+				   Cholesterol is a type of body fat, or lipid. A serum cholesterol level is a measurement of certain elements in the blood, including the amount of high- and low-density lipoprotein cholesterol (HDL and LDL) in a person’s blood.
+
+Serum cholesterol levels also show the amount of triglycerides present. Triglycerides are another lipid that can be measured in the blood.
+			
+			<br>
+			Cholesterol levels for adults
+			<li>Total cholesterol levels less than 200 milligrams per deciliter (mg/dL) are considered desirable for adults.</li>
+			<li>A reading between 200 and 239 mg/dL is considered borderline high and a reading of 240 mg/dL and above is considered high.</li>
+			
+			Cholesterol levels for children
+
+			<li>An acceptable range of total cholesterol for a child is less than 170 mg/dL. </li>
+			<li>Borderline high total cholesterol for a child ranges from 170 to 199 mg/dL.</li>
+			<li>Any reading of total cholesterol over 200 in a child is too high.</li>
+			
+			
+			</div>
+		</div>
+</p>
+
+<p>
+	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
+		Fasting Blood Sugar  </a>
+		<div class="collapse" id="collapseExample3">
+			<div class="card card-body">
+				fbs - fasting blood sugar > 120 mg/dl (1 = true; 0 = false)
+		  	</div>
+		</div>
+</p>
+
+<p>
+	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4">
+		restecg  </a>
+		<div class="collapse" id="collapseExample4">
+			<div class="card card-body">
+				resting electrocardiographic results <br>
+				(0 = normal; 1 = having ST-T; 2 = hypertrophy)
+		  	</div>
+		</div>
+</p>
+<p>
+	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample5">
+		thalach  </a>
+		<div class="collapse" id="collapseExample5">
+			<div class="card card-body">
+				maximum heart rate achieved
+		  	</div>
+		</div>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+		<div class="ex6" style="color:white">
+	<div class="block">
+          <section class="hero is-dark is-bold">
+              <div class="hero-body">
+                  <div class="container has-text-centered">
+                      <h1 class="title"><mark>Result Prediction</mark></h1>
+                      <h2 class="subtitle"><mark>Predict the Heart Disease</mark></h2>
+                  </div><br>
+                
+              </div></section>
+			  </div>
+			  
+			  
+		  
+       
+		
+	<div class="container bg-dark text-white">	
+    <form action='/heart/predict' method="post">
+      <table class="table table-dark ">
+		<tr class="table-primary"><td> <b>Age </b></td>
+			<td>  <input  name="age"  placeholder="Age (in years) " ></td>
+        </tr>
+        <tr class="table-success"><td> <b> Sex</b></td>
+            <td>
+		
+  <input type="radio" id="sex" name="sex" value=0>
+  <label for="sex">Female</label><br>
+   <input type="radio" id="sex" name="sex" value=1>
+  <label for="sex">Male</label><br> </td>
+		</tr>
+		
+
+		
+		<tr class="table-danger"><td> <b>Chest pain type</b></td>
+			<td>  <input  name="cp"  placeholder="chest pain type " ></td>
+        </tr >
+        <tr class="table-active"><td><b> Resting blood pressure</b></td>
+            <td>  <input  name="trestbps" placeholder="resting blood pressure" > </td>
+		</tr>
+		<tr class="table-active"><td> <b>Serum cholestoral</b> </td>
+            <td>  <input  name="chol" placeholder="serum cholestoral (in mg/dl)" > </td>
+		</tr>
+		<tr class="table-active"><td><b> fbs </b></td>
+            <td>  <input type="radio" id="fbs" name="fbs" value=0>
+  <label for="fbs">  less than 120 mg/dl </label><br>
+   <input type="radio" id="fbs" name="fbs" value=1>
+  <label for="fbs"> greater than 120 mg/dl </label><br></td>
+			
+			</tr>
+		
+		
+		<tr class="table-active"><td> <b>restecg</b>
+		<td>
+		
+  <input type="radio" id="restecg" name="restecg" value=0>
+  <label for="restecg">0</label><br>
+   <input type="radio" id="restecg" name="restecg" value=1>
+  <label for="restecg">1</label><br>
+     <input type="radio" id="restecg" name="restecg" value=2>
+  <label for="restecg">2</label><br></td>
+
+
+            <!-- <input  name="restecg" placeholder="restecg (0 or 1)" > -->
+		</tr>
+		<tr class="table-active"><td> thalach  </td>
+            <td>  <input  name="thalach" placeholder="thalach" > </td>
+		</tr></table>
+		
+		
+        <tr>
+		<td colspan=2 align=center><br><button class="btn btn-primary active" type="submit">Predict </button></td>
+		</tr>
+	  </table>
+    </form>
+       </div>
+     <br><h2 style="color:black"> <mark>{{pred}} </mark></h2><br> 
+	 </div>	
+</div>
+
+{% endblock %}

@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+	<title>{% block title %}   {% endblock %}</title>
+	
+<div class="w3-container w3-teal  ">
+	<div class="logo">
+      <img src="https://i.pinimg.com/originals/4a/04/b6/4a04b63e89aa075d733c4d38537e1600.png" align="middle" style="width:60px;height:60px; position:absolute; top:1; left:0;" />
+    </div>
+
+  <center><h1>Health Care Application</h1></center>
+  
+
+</div>
+</head>
+<body>
+	
+    <nav class="navbar navbar-inverse">
+	  <div class="container-fluid">
+		<div class="navbar-header">
+		  <a class="navbar-brand" >HCA</a>
+		</div>
+		<ul class="nav navbar-nav">
+		  <li class="active"><a href="/mainpage">Home</a></li>
+		  
+		  <li><a href="/heart">Heart Disease</a></li>
+		  <li><a href="/diabetes">Diabetes</a></li>
+		  <li><a href="/bmi">BMI</a></li>
+		  <li><a href="/hfa">Heart Failure Prediction</a></li>
+		  <li><a href="/diseaseprediction">Disease Prediction</a></li>
+		  <li><a href="/demo">Contact</a></li>
+
+		</ul>
+		    <ul class="nav navbar-nav navbar-right">
+      <span style="color:white;"> Hello, </span>
+      {% if session ['user'] %}
+	  
+       <span style="color:white;">{{session ['user'][0]}} </span>
+      <li><a href="logout"><span class="glyphicon glyphicon-log-out"></span> LOG OUT</a></li>
+     {% else %}
+      <li><a href="signin"><span class="glyphicon glyphicon-user"></span> Sign IN</a></li>
+      <li><a href="signup"><span class="glyphicon glyphicon-log-in"></span> Sign UP</a></li>
+      {% endif %}
+    </ul>
+
+	  </div>
+	</nav>
+
+   {% block content %}
+	<body style="background-color:light-blue;">
+    {% endblock %}
+<div class="w3-container w3-teal">
+
+
+		<div class="row">
+        <div class="col-md-1">  <img src="https://i.pinimg.com/originals/4a/04/b6/4a04b63e89aa075d733c4d38537e1600.png"  style="width:90px;height:100px;"/> </div>
+	 	<div class="col-md-5">   <h2 class="text-white"> Health Care Application<b>   Prediction </b> </h4> </div>
+	 	<div class="col-md-3"> <h4> Important Links </h4> 
+	 	 
+	  
+	 	<div class="col-md-3"> <a href="/demo"><h4 class="text-white"> Contact Information </h4></a>
+	 	
+
+</div>
+        </div>
+	<div class="row bg-green text-center text-white pt-2 pb-2">
+		<div class="col-12"> <p> 2021 HCA. All Rights Reserved.</p> 
+		</div>
+		</div>
+
+</div>
+	
+		
+</body>
+</html>
