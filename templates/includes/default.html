@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}BMI Page{% endblock %}
+{% block title %}Disease Prediction{% endblock %}
 
 {% block content %}
 
@@ -13,8 +13,7 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-    <style type="text/css">
+    <!--<style type="text/css">
       body, html {
     height: 100%;
 }
@@ -38,7 +37,7 @@
   border-bottom: double;
   text-align: center;
 }
-<!--
+
 .nav.navbar-nav {
     display: flex;
     justify-content: center;
@@ -48,7 +47,7 @@
     .navbar-nav {
         float: none;
     }
-}-->
+}
 
 .tablink {
     background-color: #FEA127;
@@ -87,34 +86,39 @@ align-self: bottom;}
 #Doctor {background-color: #78A9FD; width: 600px;top:45px; left: 50px}
 #Drug {background-color: #78A9FD; width: 600px;top:45px ;left: 50px}     
       
-    </style>
+    </style>-->
 
-  
+  <style>
+  div.bg1{
+  padding: 50x;}
+  </style>
     <div class="bg"> 
       <br>
-      <div>
+     <div>
       <center><img src="https://lh3.googleusercontent.com/XGu4L46rhIGXaY60ejWMFXkyctL0J4BymlqWBUqKnPlbh9CiTyqIIBI1QBQ4HLO35LozJV2wmp8=w328-h299-no" 
         style="height:70px; width: 70px; position: absolute;top:20px; left:560px">
       <span style="font-size:50px; text-shadow: 3px 3px 6px #40e0d0;font-weight: bolder;font-family:'Garamound';color:blue">Care For You</span></center>
       </div>
 
-    <div>
-        <button class="tablink" onclick="openTab('Symptom', this, 'red')" id="defaultOpen" style="width: 300px; position: absolute; top: 175px; left:50px; ">Symptom checker</button>
-       
-</div>
 
+    <!--<div>
+        <button class="tablink" onclick="openTab('Symptom', this, 'white)" id="defaultOpen" style="width: 300px; position: absolute; top: 175px; left:50px; ">Symptom checker</button>
+       </div>-->
+<div class="bg1">
 <div id="Symptom" class="tabcontent">
   <form name="SymptomForm" id="SymForm" method="POST" action=/disease_predict>
-    <div class="head">
-      Symptom Checker
+    <div class="head"><h3>
+      Symptom Checker</h3>
     </div>
-    <div class="form-group">
+    <div class="bg1 form-group">
       <!-- <select multiple data-role="tagsinput" class="form-control" size=1>
           {% for symp in symptoms  %}
           <option value= "{{symp}}">{{symp}}</option>
         {% endfor %}
       </select> -->
-      <label for="Symptom1" align="left">Symptom1</label>
+      
+	  
+	  <label for="Symptom1" align="right">Symptom1</label>
       <input type="text" list="symp" multiple="multiple" class="form-control" name="Symptom1">
       <datalist id="symp">
           {% for symp in symptoms %}
