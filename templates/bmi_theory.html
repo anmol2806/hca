@@ -17,7 +17,9 @@ div.ex3 {
 }
 #responsive-image {  width: 80%;  height: auto; } 
 #responsive-image1 {  width: 100%; max-height:200px;  height:auto}
-
+table, th, td {
+  border: 2px solid black;
+}
 
 
 
@@ -116,18 +118,23 @@ BMI is calculated by dividing a person’s weight by the square of their height.
 	<h3>Predict the Body Mass Index </h3>
             
    
-      <table>
-		<tr><td> Name
+      <table class="table table-dark" style="width:80%">
+		<!--<tr><td><span style="color:blue "> Name</span>
+			<td>  <input type=string name="name"  placeholder="Name " >
+        </tr>-->
+		<tr><td><mark> Name</mark>
 			<td>  <input type=string name="name"  placeholder="Name " >
         </tr>
+		
+		
 		<form action="{{ url_for('predict3')}}" method="post">
-        <tr><td> Gender 
+        <tr><td> <mark>Gender </mark>
             <td>  <input  name="gender" type=radio   value=0> Male <input  name="gender" type=radio   value=1> Female
 		</tr>
-		<tr><td> Height
+		<tr><td> <mark>Height</mark>
 			<td>  <input type=number name="height"  placeholder="Height (in inches) " >
         </tr>
-		<tr><td> Weight
+		<tr><td> <mark>Weight</mark>
 			<td>  <input type=number name="weight"  placeholder="Weight (in Kgs) " >
         </tr>
 		
@@ -138,7 +145,7 @@ BMI is calculated by dividing a person’s weight by the square of their height.
 	  </table>
     </form>
        
-     <br> {{pred}}<br>  
+     <br> <mark>You are {{pred}}</mark><br>  
 </div>
   </div>
    
