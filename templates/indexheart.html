@@ -46,10 +46,10 @@ div.ex2 {
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
 
 
-<h1 style="font-size:60px";> Everything You Need to Know About Heart Disease</h1>
+<h1 style="font-size:50px";> Everything You Need to Know About Heart Disease</h1>
 <br>
 
-<h2 style="font-size:40px";> Who gets heart disease?</h2>
+<h2 style="font-size:30px";> Who gets heart disease?</h2>
 
 <p style="font-size:20px";>
 Heart disease is the leading cause of death in the United States, according to the Centers for Disease Control and Prevention (CDC)Trusted Source. In the United States, 1 in every 4 deaths in is the result of a heart disease. That’s about 610,000 people who die from the condition each year.
@@ -63,12 +63,13 @@ While heart disease can be deadly, it’s also preventable in most people. By ad
 <a href="/heartdata"> <b>Dataset used</b></a>
 <br>
 
-<h2 style="font-size:40px";> Parameters required to predict</h2>
+<h2 style="font-size:30px";> Parameters required to predict</h2>
+<span style="font-size:13px";><mark>click button to know details</mark></span><br>
 
-
+<br><br>
 <p>
 	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-		Chest Pain(cp)  </a>
+		<span style="font-size:22px";>Chest Pain(cp) </span> </a>
 		<div class="collapse" id="collapseExample">
 			<div class="card card-body">
 				cp - chest pain type (1 = typical angina; 2 = atypical angina; 3 = non-anginal pain; 4 = asymptomatic)
@@ -81,7 +82,7 @@ While heart disease can be deadly, it’s also preventable in most people. By ad
 
 <p>
 	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
-		trestbps  </a>
+		<span style="font-size:22px";>trestbps  </span></a>
 		<div class="collapse" id="collapseExample1">
 			<div class="card card-body">
 				resting blood pressure (in mm Hg on admission to the hospital)<br>
@@ -95,7 +96,7 @@ While heart disease can be deadly, it’s also preventable in most people. By ad
 
 <p>
 	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
-			Serum cholesterol in mg/dl  </a>
+		<span style="font-size:22px";>	Serum cholesterol in mg/dl </span> </a>
 		<div class="collapse" id="collapseExample2">
 			<div class="card card-body">
 				   Cholesterol is a type of body fat, or lipid. A serum cholesterol level is a measurement of certain elements in the blood, including the amount of high- and low-density lipoprotein cholesterol (HDL and LDL) in a person’s blood.
@@ -120,7 +121,7 @@ Serum cholesterol levels also show the amount of triglycerides present. Triglyce
 
 <p>
 	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
-		Fasting Blood Sugar  </a>
+		<span style="font-size:22px";>Fasting Blood Sugar</span>  </a>
 		<div class="collapse" id="collapseExample3">
 			<div class="card card-body">
 				fbs - fasting blood sugar > 120 mg/dl (1 = true; 0 = false)
@@ -130,7 +131,7 @@ Serum cholesterol levels also show the amount of triglycerides present. Triglyce
 
 <p>
 	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4">
-		restecg  </a>
+		<span style="font-size:22px";>restecg </span> </a>
 		<div class="collapse" id="collapseExample4">
 			<div class="card card-body">
 				resting electrocardiographic results <br>
@@ -141,7 +142,7 @@ Serum cholesterol levels also show the amount of triglycerides present. Triglyce
 
 <p>
 	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample5">
-		thalach  </a>
+		<span style="font-size:22px";>thalach  </span></a>
 		<div class="collapse" id="collapseExample5">
 			<div class="card card-body">
 				maximum heart rate achieved
@@ -195,9 +196,11 @@ Serum cholesterol levels also show the amount of triglycerides present. Triglyce
 	<div class="container bg-dark text-white">	
     <form action='/heart/predict' method="post">
       <table class="table table-dark ">
+	  
 		<tr class="table-primary"><td> <b>Age </b></td>
 			<td>  <input  name="age"  placeholder="Age (in years) " ></td>
         </tr>
+		
         <tr class="table-success"><td> <b> Sex</b></td>
             <td>
 		
@@ -206,18 +209,28 @@ Serum cholesterol levels also show the amount of triglycerides present. Triglyce
    <input type="radio" id="sex" name="sex" value=1>
   <label for="sex">Male</label><br> </td>
 		</tr>
-		
-
-		
+				
 		<tr class="table-danger"><td> <b>Chest pain type</b></td>
-			<td>  <input  name="cp"  placeholder="chest pain type " ></td>
-        </tr >
+			<td>  
+			<input type="radio" id="cp" name="cp" value=1>
+  <label for="cp">1 = typical angina</label><br>
+   <input type="radio" id="cp" name="cp" value=2>
+  <label for="cp">2 = atypical angina</label><br> 
+		<input type="radio" id="cp" name="cp" value=3>
+  <label for="cp">3 = non-anginal pain</label><br>
+   <input type="radio" id="cp" name="cp" value=4>
+  <label for="cp"> 4 = asymptomatic</label><br> </td>	
+		 </tr >
+		 
         <tr class="table-active"><td><b> Resting blood pressure</b></td>
             <td>  <input  name="trestbps" placeholder="resting blood pressure" > </td>
 		</tr>
+		
 		<tr class="table-active"><td> <b>Serum cholestoral</b> </td>
+		
             <td>  <input  name="chol" placeholder="serum cholestoral (in mg/dl)" > </td>
 		</tr>
+		
 		<tr class="table-active"><td><b> fbs </b></td>
             <td>  <input type="radio" id="fbs" name="fbs" value=0>
   <label for="fbs">  less than 120 mg/dl </label><br>
@@ -226,8 +239,7 @@ Serum cholesterol levels also show the amount of triglycerides present. Triglyce
 			
 			</tr>
 		
-		
-		<tr class="table-active"><td> <b>restecg</b>
+		<tr class="table-active"><td> <b>restecg</b></td>
 		<td>
 		
   <input type="radio" id="restecg" name="restecg" value=0>
@@ -240,7 +252,8 @@ Serum cholesterol levels also show the amount of triglycerides present. Triglyce
 
             <!-- <input  name="restecg" placeholder="restecg (0 or 1)" > -->
 		</tr>
-		<tr class="table-active"><td> thalach  </td>
+		
+		<tr class="table-active"><td> <b>thalach</b>  </td>
             <td>  <input  name="thalach" placeholder="thalach" > </td>
 		</tr></table>
 		
