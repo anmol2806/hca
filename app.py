@@ -143,6 +143,12 @@ def mainhome():
 def contact():
     return render_template("contact_us.html")
     
+
+
+@app.route('/backend')    
+def data124(): 
+    return render_template("backheart.html")  
+
     
     
     
@@ -207,7 +213,10 @@ def predict2():
 
     return render_template('index_diabetes.html', prediction_text='{}'.format(output))
     
-
+@app.route('/backdiabetesdata')    
+def data125(): 
+    return render_template("backdiabetes.html")  
+    
 
 
 
@@ -227,7 +236,9 @@ def predict3():
     
     return render_template('bmi_theory.html', pred=prediction)
 
-
+@app.route('/backendbmidata')    
+def data126(): 
+    return render_template("backbmi.html")  
 
 
 
