@@ -179,6 +179,10 @@ def data():
 	text_file.close()
 	return render_template("heartdata.html")  
     
+@app.route('/backheartdata')    
+def data123(): 
+    return render_template("backheart.html")  
+    
     
     
     

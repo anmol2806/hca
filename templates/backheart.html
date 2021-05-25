@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+
+{% block title %}Heart Disease Backend{% endblock %}
+
+{% block content %}
+
+<style>
+
+
+div.ex3 {
+	background-image:url("{{ url_for('static', filename='10766561.jpg') }}");
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+
+}
+#responsive-image {  width: 90%;  height: auto;
+padding-left:10px }
+</style>
+
+<img src="/static/backheart/1.jpg" id="responsive-image">
+
+
+
+<div class="ex3 " style="color: white">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+
+
+
+
+
+<p style="text-align:center;">
+	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+		<span style="font-size:22px";>Importing Libraries </span> </a>
+		<div class="collapse" id="collapseExample">
+			<div class="card card-body">
+				<img src="/static/backheart/2.jpg" id="responsive-image"><br>
+					<p style="text-align:center; font-size: 20px;">
+					Figure 1: Importing Different Libraries
+					</p>
+		  	</div>
+		</div>
+</p>
+
+<p style="text-align:center;">
+	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
+		<span style="font-size:22px";>Reading Dataset  </span></a>
+		<div class="collapse" id="collapseExample1">
+			<div class="card card-body">
+				<img src="/static/backheart/3.jpg" id="responsive-image"><br>
+					<p style="text-align:center; font-size: 20px;">
+					Figure 2: Reading Dataset Using Pandas
+					</p>
+				</div>
+		</div>
+</p>
+
+<p style="text-align:center;">
+	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
+		<span style="font-size:22px";>	Plot1  </span> </a>
+		<div class="collapse" id="collapseExample2">
+			<div class="card card-body">
+				<img src="/static/backheart/4.jpg" id="responsive-image"><br>
+					<p style="text-align:center; font-size: 20px;">
+					Figure 3: Age vs Heart Disease Plot
+					</p>
+			
+			</div>
+		</div>
+</p>
+
+<p style="text-align:center;">
+	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
+		<span style="font-size:22px";>Splitting Dataset</span>  </a>
+		<div class="collapse" id="collapseExample3">
+			<div class="card card-body">
+				<img src="/static/backheart/5.jpg" id="responsive-image"><br>
+					<p style="text-align:center; font-size: 20px;">
+					Figure 4: Splitting Dataset for Applying Machine Learning Algorithm
+					</p>
+		  	</div>
+		</div>
+</p>
+
+
+</div>
+
+
+
+<div class="ex3 ">
+<p style="text-align:center; font-size: 35px;color: white;">
+					<b>Choosing Best Machine Learning Algorithm Based on Accuracy Score</b>
+					</p>
+					<img id="image" src="/static/backheart/1.jpg" /><br>
+					<p style="text-align:center;">
+<select id="AlgoList">
+	<option value="/static/backheart/1.jpg">header</option>
+    <option value="/static/backheart/LRalgo.jpg">Logistic Regression</option>
+    <option value="/static/backheart/KNCalgo.jpg">KNeighbors Classifier</option>
+    <option value="/static/backheart/RFCalgo.jpg">Random Forest Classifier</option>
+	 <option value="/static/backheart/DTCalgo.jpg">Decision Tree Classifier</option>
+    <option value="/static/backheart/SVMalgo.jpg">Support Vector Machine</option>
+		 <option value="/static/backheart/NBalgo.jpg">Naive Bayes Classifier</option>
+  
+</select></p>
+
+<p style="text-align:center; font-size: 25px;color: white;">
+					<b>So The best Algorithm based on Accuracy Score is Logistic Regression
+					</b>
+					</p>
+
+
+
+
+<script>
+function setalgo() {
+    var img = document.getElementById("image");
+    img.src = this.value;
+    return false;
+}
+document.getElementById("AlgoList").onchange = setalgo;
+</script>
+
+ </div>
+{% endblock %}
