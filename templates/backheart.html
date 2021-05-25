@@ -32,7 +32,7 @@ div.ex3 {
 padding-left:10px }
 </style>
 
-<img src="/static/backheart/1.jpg" id="responsive-image">
+<img src="{{ url_for('static', filename='backheart/1.jpg') }}" id="responsive-image">
 
 
 
@@ -56,7 +56,7 @@ padding-left:10px }
 		<span style="font-size:22px";>Importing Libraries </span> </a>
 		<div class="collapse" id="collapseExample">
 			<div class="card card-body">
-				<img src="/static/backheart/2.jpg" id="responsive-image"><br>
+				<img src="{{ url_for('static', filename='backheart/2.jpg') }}" id="responsive-image"><br>
 					<p style="text-align:center; font-size: 20px;">
 					Figure 1: Importing Different Libraries
 					</p>
@@ -69,7 +69,7 @@ padding-left:10px }
 		<span style="font-size:22px";>Reading Dataset  </span></a>
 		<div class="collapse" id="collapseExample1">
 			<div class="card card-body">
-				<img src="/static/backheart/3.jpg" id="responsive-image"><br>
+				<img src="{{ url_for('static', filename='backheart/3.jpg') }}" id="responsive-image"><br>
 					<p style="text-align:center; font-size: 20px;">
 					Figure 2: Reading Dataset Using Pandas
 					</p>
@@ -82,7 +82,7 @@ padding-left:10px }
 		<span style="font-size:22px";>	Plot1  </span> </a>
 		<div class="collapse" id="collapseExample2">
 			<div class="card card-body">
-				<img src="/static/backheart/4.jpg" id="responsive-image"><br>
+				<img src="{{ url_for('static', filename='backheart/4.jpg') }}" id="responsive-image"><br>
 					<p style="text-align:center; font-size: 20px;">
 					Figure 3: Age vs Heart Disease Plot
 					</p>
@@ -96,7 +96,7 @@ padding-left:10px }
 		<span style="font-size:22px";>Splitting Dataset</span>  </a>
 		<div class="collapse" id="collapseExample3">
 			<div class="card card-body">
-				<img src="/static/backheart/5.jpg" id="responsive-image"><br>
+				<img src="{{ url_for('static', filename='backheart/5.jpg') }}" id="responsive-image"><br>
 					<p style="text-align:center; font-size: 20px;">
 					Figure 4: Splitting Dataset for Applying Machine Learning Algorithm
 					</p>
