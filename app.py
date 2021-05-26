@@ -86,19 +86,28 @@ def login():
             return render_template('login_1.html',msg=msg)
     else:
         return render_template('login_1.html')
-
+        
+        
+# ===================
+#    Flask Logout
+# ===================
 @app.route('/signin/logout')
 def logout():
 	session.pop('user', None)
 	return render_template('login_1.html')
     
-    
+# ===================
+#    Flask Logout2
+# ===================    
 @app.route('/logout')
 def logout1():
 	session.pop('user', None)
 	return render_template('login_1.html')
     
-    
+# ===================
+#   Check session 
+# is active or not
+# ===================    
 @app.route('/s')
 def student():
     if 'user' in session:  
@@ -109,8 +118,9 @@ def student():
         return render_template('login_1.html')
 
 
-
-# Signup page
+# ===================
+#  signup page
+# ===================
 @app.route('/signup/', methods=['GET', 'POST'])
 def signup():
     if request.method == 'POST':
@@ -133,18 +143,24 @@ def sum():
     sum = a+b
     return jsonify(sum)
 
-
+# ===================
+#   Main Page
+# ===================
 @app.route('/mainpage')
 def mainhome():
     return render_template("homepage_1.html")
 
-
+# ===================
+#   Contact Us Page
+# ===================
 @app.route('/demo')
 def contact():
     return render_template("contact_us.html")
     
 
-
+# ===================
+#   Backend Heart Page
+# ===================
 @app.route('/backend')    
 def data124(): 
     return render_template("backheart.html")  
@@ -152,7 +168,9 @@ def data124():
     
     
     
-    
+# ===================
+#   Heart Disease Page
+# ===================    
 @app.route('/heart')
 def home1():
     return render_template("indexheart.html")
@@ -191,7 +209,9 @@ def data123():
     
     
     
-    
+# ===================
+#   Diabetes Page
+# ===================    
 @app.route('/diabetes')
 def home2():
     return render_template('index_diabetes.html')  
@@ -220,7 +240,9 @@ def data125():
 
 
 
-
+# ===================
+#  BMI Page
+# ===================
 @app.route('/bmi')
 def home3():
     return render_template("bmi_theory.html")
@@ -243,7 +265,9 @@ def data126():
 
 
 
-
+# ===================
+#   Heart Failure Page
+# ===================
 @app.route('/hfa')
 def hfa():
     return render_template("heart_pred.html")
@@ -284,7 +308,10 @@ def results():
     return jsonify(output)
 
  
-
+# ===================
+# Disease Prediction 
+# Page
+# ===================
 with open('templates/Testing.csv', newline='') as f:
         reader = csv.reader(f)
         symptoms = next(reader)
