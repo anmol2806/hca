@@ -3,6 +3,13 @@
 {% block title %}Home Page{% endblock %}
 
 {% block content %}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
 	<style>
 
 div.ex4 {
@@ -12,13 +19,18 @@ div.ex4 {
   background-size: 100% 100%;
 }
 #responsive-image {  width: 100%;  height: auto; } 
+div.ex2 {
+  
+  padding: 15px;
+  
+}
 
 </style>
 
-<img src="/static/about_1.png" id="responsive-image>
-
-<div>
-<div class="ex4" style="color:white"  >
+<img src="/static/about_1.png" id="responsive-image">
+<div class="ex2" style="background-color:#F2F0EF ">
+<!--<div>
+<div class="ex4" style="color:white"  >-->
     <h2><b>About Us</b></h2>
         <b> <div style="font-size: 20px;"> This is a health care application developed to predict heart disease, diabetes, heart failure chances , different disease from symptoms
 		and bmi of a person.
@@ -27,22 +39,32 @@ div.ex4 {
  
     <h2><b>Various Python Libraries Used  </b></h2>
 		<div style="font-size: 20px;">
-            <ol><li><b>numpy</b>:- NumPy is a general-purpose array-processing package. 
-				It provides a high-performance multidimensional array object, and tools for working with these arrays.
+			<div class="row"><div class="col-sm-8">
+            <ol><li>
+				<b>numpy</b>:- NumPy is a general-purpose array-processing package. 
+				It provides a high-performance multidimensional array object, and tools 
+				for working with these arrays.
 				It is the fundamental package for scientific computing with Python.
 				It contains various features including these important ones:
 				<ul><li>A powerful N-dimensional array object</li>
 					<li>Sophisticated (broadcasting) functions</li>
 					<li>Tools for integrating C/C++ and Fortran code</li>
 					<li>Useful linear algebra, Fourier transform, and random number capabilities</li></ul>
-				Besides its obvious scientific uses, NumPy can also be used as an efficient multi-dimensional container of generic data.
-				Arbitrary data-types can be defined using Numpy which allows NumPy to seamlessly and speedily integrate with a wide variety of databases.</li>
-					
+				Besides its obvious scientific uses, NumPy can also be used as an 
+				efficient multi-dimensional container of generic data.
+				Arbitrary data-types can be defined using Numpy which allows NumPy 
+				to seamlessly and speedily integrate with a wide variety of databases.</li></div>
+				<div class="col-sm-4"><img src="/static/numpy.png" id="responsive-image"></div>
+				
+				
+				<div class="col-sm-10">	
 				<li><b>pandas</b>:- Pandas is an open-source library that is built on top of NumPy library. 
 				It is a Python package that offers various data structures and operations for manipulating numerical data and time series. 
 				It is mainly popular for importing and analyzing data much easier. 
-				Pandas is fast and it has high-performance & productivity for users.</li>
-
+				Pandas is fast and it has high-performance & productivity for users.</li></div>
+				<div class="col-sm-2"><img src="/static/numpy.png" id="responsive-image"></div>
+				
+					<div class="col-sm-10">	
 				<li><b>scikit-Learn</b>:- scikit-learn is an open source Python library that implements a range of machine learning, pre-processing, cross-validation and visualization algorithms using a unified interface.
 				Important features of scikit-learn:
 				<ul><li>Simple and efficient tools for data mining and data analysis.
@@ -51,7 +73,9 @@ div.ex4 {
 					gradient boosting, k-means, etc.</li>
 					<li>Accessible to everybody and reusable in various contexts.</li>
 					<li>Built on the top of NumPy, SciPy, and matplotlib.</li>
-					<li>Open source, commercially usable – BSD license.</li></ul></li>
+					<li>Open source, commercially usable – BSD license.</li></ul></li></div>
+				<div class="col-sm-2"><img src="/static/numpy.png" id="responsive-image"></div>
+				</div>
 					
 				</ol></div>
 				
@@ -82,5 +106,5 @@ div.ex4 {
 				As such, SQLite has become very popular with smart phone developers.</li>
 					
 					
-  
+  </div>
 {% endblock %}
