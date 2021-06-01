@@ -19,7 +19,11 @@
 
 
 <style>
-
+div.ex2 {
+  
+  padding: 25px;
+  
+}
 
 div.ex3 {
 	background-image:url("{{ url_for('static', filename='10766561.jpg') }}");
@@ -39,7 +43,7 @@ padding-left:10px
 
 
 
-<div class="ex3 " style="color: white">
+<div class="ex3 ex2" style="color: white">
 
 
 
@@ -80,6 +84,8 @@ padding-left:10px
 		</div>
 </p>
 
+
+<!--
 <p style="text-align:center;">
 	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
 		<span style="font-size:22px";>	Plot1  </span> </a>
@@ -92,7 +98,137 @@ padding-left:10px
 			
 			</div>
 		</div>
-</p>
+</p>-->
+
+
+
+<div class="row ">
+<h2>
+Exploratory Data Analysis (EDA)</h2>
+ <p style="font-size: 20px;">
+ <b>Plotting univariate distributions :-</b>
+								The most convenient way to take a quick look at a univariate distribution
+								in seaborn is the distplot() function. By default, this will draw a histogram 
+								and fit a kernel density estimate (KDE).
+						</p>
+    <div class="col-sm-3 col-md-6 col-lg-4">
+		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
+			<span style="font-size:22px";>	Age Distribution
+			</span> 
+		</a>
+				<div class="collapse" id="collapseExample2">
+					<div class="card card-body">
+						<img src="{{ url_for('static', filename='backheart/4.png') }}" id="responsive-image"><br>
+							<p style="text-align:center; font-size: 20px;">
+								Figure 3: Age Distribution Plot
+							</p>
+					</div>
+				</div>
+	</div>
+		
+	<div class="col-sm-3 col-md-6 col-lg-4">
+		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample10" role="button" aria-expanded="false" aria-controls="collapseExample10">
+			<span style="font-size:22px";>	BPS Distribution 
+			</span> </a>
+				<div class="collapse" id="collapseExample10">
+					<div class="card card-body">
+						
+					<img src="{{ url_for('static', filename='backheart/4.png') }}" id="responsive-image"><br>
+						<p style="text-align:center; font-size: 20px;">
+							Figure 4: BPS Distribution Plot
+						</p>
+					</div>
+				</div>
+	</div>
+		
+	<div class="col-sm-3 col-md-6 col-lg-4">
+		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
+			<span style="font-size:22px";>	Chol Distribution  </span> </a>
+			<div class="collapse" id="collapseExample2">
+				<div class="card card-body">
+					<img src="{{ url_for('static', filename='backheart/4.png') }}" id="responsive-image"><br>
+						<p style="text-align:center; font-size: 20px;">
+						Figure 5:  Chol Distribution Plot
+						</p>
+			
+				</div>
+
+			</div>
+	</div>
+</div>
+
+<br>
+		
+<p style="text-align:center; font-size: 20px;">
+	<b>Visualizing pairwise relationships in a dataset :-</b>
+		To plot multiple pairwise bivariate distributions in a dataset, 
+		we have used the pairplot() function. This creates a matrix of axes and shows the 
+		relationship for each pair of columns in a DataFrame. by default, it also draws the
+		univariate distribution of each variable on the diagonal Axes
+	<br>
+	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
+		<span style="font-size:22px";>Pair Plot  </span></a>
+		<div class="collapse" id="collapseExample1">
+			<div class="card card-body">
+				<img src="{{ url_for('static', filename='backheart/3.png') }}" id="responsive-image"><br>
+					<p style="text-align:center; font-size: 20px;">
+						Figure 2: Pair Plot
+					</p>
+				</div>
+		</div>
+</p>	
+
+
+
+<div class="row">
+
+	<p style="font-size: 20px;">
+		<b>Plots with categorical data :-</b>
+	</p>
+ 
+    <div class="col-sm-3 col-md-6 col-lg-4">
+		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
+			<span style="font-size:22px";>	Plot4  </span> </a>
+				<div class="collapse" id="collapseExample2">
+					<div class="card card-body">
+						<img src="{{ url_for('static', filename='backheart/4.png') }}" id="responsive-image"><br>
+						<p style="text-align:center; font-size: 20px;">
+							Figure 6: Strip Plot
+						</p>
+					</div>
+				</div>
+	</div>
+		
+	<div class="col-sm-3 col-md-6 col-lg-4">
+
+	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
+		<span style="font-size:22px";>	Plot5  </span> </a>
+		<div class="collapse" id="collapseExample2">
+			<div class="card card-body">
+				<img src="{{ url_for('static', filename='backheart/4.png') }}" id="responsive-image"><br>
+					<p style="text-align:center; font-size: 20px;">
+					Figure 7: Swarm Plot
+					</p>
+			
+			</div>
+
+		</div>
+		</div><div class="col-sm-3 col-md-6 col-lg-4">
+	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
+		<span style="font-size:22px";>	Plot6  </span> </a>
+		<div class="collapse" id="collapseExample2">
+			<div class="card card-body">
+				<img src="{{ url_for('static', filename='backheart/4.png') }}" id="responsive-image"><br>
+					<p style="text-align:center; font-size: 20px;">
+					Figure 8: Count Plot
+					</p>
+			
+			</div>
+
+		</div>
+		</div></div>
+
+
 
 <p style="text-align:center;">
 	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
@@ -118,6 +254,7 @@ padding-left:10px
 					</p>
 					<img id="image" src="/static/backheart/mlalgo.jpg" id="responsive-image"/><br>
 					<p style="text-align:center;">
+					
 <select id="AlgoList">
 	<option value="/static/backheart/mlalgo.jpg">header</option>
     <option value="/static/backheart/LRalgo.png">Logistic Regression</option>
@@ -126,7 +263,7 @@ padding-left:10px
 	 <option value="/static/backheart/DTCalgo.png">Decision Tree Classifier</option>
     <option value="/static/backheart/SVMalgo.png">Support Vector Machine</option>
 		 <option value="/static/backheart/NBalgo.png">Naive Bayes Classifier</option>
-  
+ 
 </select></p>
 
 <p style="text-align:center; font-size: 25px;color: white;">
