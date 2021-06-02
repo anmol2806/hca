@@ -32,11 +32,16 @@ div.ex3 {
   background-size: 100% 100%;
 
 }
+
+#responsive-image1 {  width: 80%;  max-height:600px; height: auto;}
 #responsive-image {  width: 90%;  height: auto;
 padding-left:10px }
 img{width: 90%;  height: auto;
 padding-left:10px
 }
+
+
+
 </style>
 
 <img src="{{ url_for('static', filename='backheart/1.png') }}" id="responsive-image">
@@ -111,14 +116,14 @@ Exploratory Data Analysis (EDA)</h2>
 								in seaborn is the distplot() function. By default, this will draw a histogram 
 								and fit a kernel density estimate (KDE).
 						</p>
-    <div class="col-sm-3 col-md-6 col-lg-4">
+    <div class="col-sm-4 col-md-4 col-lg-4">
 		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
 			<span style="font-size:22px";>	Age Distribution
 			</span> 
 		</a>
 				<div class="collapse" id="collapseExample2">
 					<div class="card card-body">
-						<img src="{{ url_for('static', filename='backheart/4.png') }}" id="responsive-image"><br>
+						<img src="{{ url_for('static', filename='backheart/q1.png') }}" id="responsive-image"><br>
 							<p style="text-align:center; font-size: 20px;">
 								Figure 3: Age Distribution Plot
 							</p>
@@ -126,14 +131,14 @@ Exploratory Data Analysis (EDA)</h2>
 				</div>
 	</div>
 		
-	<div class="col-sm-3 col-md-6 col-lg-4">
-		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample10" role="button" aria-expanded="false" aria-controls="collapseExample10">
+	<div class="col-sm-4 col-md-4 col-lg-4">
+		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
 			<span style="font-size:22px";>	BPS Distribution 
 			</span> </a>
-				<div class="collapse" id="collapseExample10">
+				<div class="collapse" id="collapseExample3">
 					<div class="card card-body">
 						
-					<img src="{{ url_for('static', filename='backheart/4.png') }}" id="responsive-image"><br>
+					<img src="{{ url_for('static', filename='backheart/q2.png') }}" id="responsive-image"><br>
 						<p style="text-align:center; font-size: 20px;">
 							Figure 4: BPS Distribution Plot
 						</p>
@@ -141,12 +146,12 @@ Exploratory Data Analysis (EDA)</h2>
 				</div>
 	</div>
 		
-	<div class="col-sm-3 col-md-6 col-lg-4">
-		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
+	<div class="col-sm-4 col-md-4 col-lg-4">
+		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4">
 			<span style="font-size:22px";>	Chol Distribution  </span> </a>
-			<div class="collapse" id="collapseExample2">
+			<div class="collapse" id="collapseExample4">
 				<div class="card card-body">
-					<img src="{{ url_for('static', filename='backheart/4.png') }}" id="responsive-image"><br>
+					<img src="{{ url_for('static', filename='backheart/q3.png') }}" id="responsive-image"><br>
 						<p style="text-align:center; font-size: 20px;">
 						Figure 5:  Chol Distribution Plot
 						</p>
@@ -166,13 +171,13 @@ Exploratory Data Analysis (EDA)</h2>
 		relationship for each pair of columns in a DataFrame. by default, it also draws the
 		univariate distribution of each variable on the diagonal Axes
 	<br>
-	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
+	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample5">
 		<span style="font-size:22px";>Pair Plot  </span></a>
-		<div class="collapse" id="collapseExample1">
+		<div class="collapse" id="collapseExample5">
 			<div class="card card-body">
-				<img src="{{ url_for('static', filename='backheart/3.png') }}" id="responsive-image"><br>
+				<img src="{{ url_for('static', filename='backheart/q4.png') }}" id="responsive-image1"><br>
 					<p style="text-align:center; font-size: 20px;">
-						Figure 2: Pair Plot
+						Figure 6: Pair Plot between age, bloodpressure and cholestrol
 					</p>
 				</div>
 		</div>
@@ -184,49 +189,271 @@ Exploratory Data Analysis (EDA)</h2>
 
 	<p style="font-size: 20px;">
 		<b>Plots with categorical data :-</b>
+		In a strip plot, the scatterplot points will usually overlap. 
+		This makes it difficult to see the full distribution of data. 
+		One easy solution is to adjust the positions (only along the categorical axis) using some random “jitter"<br>
+		A different approach would be to use the function swarmplot(), which positions each scatterplot point on 
+		the categorical axis with an algorithm that avoids overlapping points
 	</p>
  
-    <div class="col-sm-3 col-md-6 col-lg-4">
-		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
-			<span style="font-size:22px";>	Plot4  </span> </a>
-				<div class="collapse" id="collapseExample2">
+    <div class="col-sm-6 col-md-6 col-lg-6">
+		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample6" role="button" aria-expanded="false" aria-controls="collapseExample6">
+			<span style="font-size:22px";>	Strip Plot  </span> </a>
+				<div class="collapse" id="collapseExample6">
 					<div class="card card-body">
-						<img src="{{ url_for('static', filename='backheart/4.png') }}" id="responsive-image"><br>
+						<img src="{{ url_for('static', filename='backheart/q5.png') }}" id="responsive-image"><br>
 						<p style="text-align:center; font-size: 20px;">
-							Figure 6: Strip Plot
+							Figure 7: Strip Plot between fasting blood sugar and cholestrol
 						</p>
 					</div>
 				</div>
 	</div>
 		
-	<div class="col-sm-3 col-md-6 col-lg-4">
+	<div class="col-sm-6 col-md-6 col-lg-6">
 
-	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
-		<span style="font-size:22px";>	Plot5  </span> </a>
-		<div class="collapse" id="collapseExample2">
+	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample7" role="button" aria-expanded="false" aria-controls="collapseExample7">
+		<span style="font-size:22px";>	Swarm Plot  </span> </a>
+		<div class="collapse" id="collapseExample7">
 			<div class="card card-body">
-				<img src="{{ url_for('static', filename='backheart/4.png') }}" id="responsive-image"><br>
+				<img src="{{ url_for('static', filename='backheart/q6.png') }}" id="responsive-image"><br>
 					<p style="text-align:center; font-size: 20px;">
-					Figure 7: Swarm Plot
+					Figure 8: Swarm Plot between fasting blood sugar and cholestrol
 					</p>
 			
 			</div>
 
 		</div>
-		</div><div class="col-sm-3 col-md-6 col-lg-4">
-	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
-		<span style="font-size:22px";>	Plot6  </span> </a>
-		<div class="collapse" id="collapseExample2">
+		</div>
+</div>
+
+<br>
+<div class="row ">
+
+ <p style="font-size: 20px;">
+ <b>Bar Plots :-</b>	A familiar style of plot that accomplishes this goal is a bar plot. In seaborn, 
+						the barplot() function operates on a full dataset and shows an arbitrary estimate, 
+						using the mean by default. When there are multiple observations in each category,
+						it also uses bootstrapping to compute a confidence interval around the estimate and
+						plots that using error bars:
+<br>
+						Bar plots include 0 in the quantitative axis range, and they are a good choice when 0
+						is a meaningful value for the quantitative variable, and you want to make comparisons against it.
+						<br>
+						A special case for the bar plot is when you want to show the number of observations in each category
+						rather than computing a statistic for a second variable. This is similar to a histogram over 
+						a categorical, rather than quantitative, variable. In seaborn, it’s easy to do so with the
+						countplot() function:
+						</p>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample8" role="button" aria-expanded="false" aria-controls="collapseExample8">
+			<span style="font-size:22px";>	Bar Plot 
+			</span> 
+		</a>
+				<div class="collapse" id="collapseExample8">
+					<div class="card card-body">
+						<img src="{{ url_for('static', filename='backheart/q7.png') }}" id="responsive-image"><br>
+							<p style="text-align:center; font-size: 20px;">
+								Figure 9: Plot b/w chest pain and age with fasting blood sugar
+							</p>
+					</div>
+				</div>
+	</div>
+		
+	<div class="col-sm-4 col-md-4 col-lg-4">
+		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample9" role="button" aria-expanded="false" aria-controls="collapseExample9">
+			<span style="font-size:22px";>	Count Plot 1
+			</span> </a>
+				<div class="collapse" id="collapseExample9">
+					<div class="card card-body">
+						
+					<img src="{{ url_for('static', filename='backheart/q8.png') }}" id="responsive-image"><br>
+						<p style="text-align:center; font-size: 20px;">
+							Figure 10: People having chest pain
+						</p>
+					</div>
+				</div>
+	</div>
+		
+	<div class="col-sm-4 col-md-4 col-lg-4">
+		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample10" role="button" aria-expanded="false" aria-controls="collapseExample10">
+			<span style="font-size:22px";>	Count Plot 2</span> </a>
+			<div class="collapse" id="collapseExample10">
+				<div class="card card-body">
+					<img src="{{ url_for('static', filename='backheart/q9.png') }}" id="responsive-image"><br>
+						<p style="text-align:center; font-size: 20px;">
+						Figure 11:  People having fasting blood sugar
+						</p>
+			
+				</div>
+
+			</div>
+	</div>
+</div>
+
+<br>
+
+<div class="row ">
+
+ <p style="font-size: 20px;">
+ <b>Linear Regression Plots :-</b>	lmplot() is one of the most widely used function to quickly plot
+ the Linear Relationship b/w 2 variables
+						</p>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample11" role="button" aria-expanded="false" aria-controls="collapseExample11">
+			<span style="font-size:22px";>	 lmplot 1
+			</span> 
+		</a>
+				<div class="collapse" id="collapseExample11">
+					<div class="card card-body">
+						<img src="{{ url_for('static', filename='backheart/q10.png') }}" id="responsive-image"><br>
+							<p style="text-align:center; font-size: 20px;">
+								Figure 12: Linear Relationship b/w age and cholestrol
+							</p>
+					</div>
+				</div>
+	</div>
+		
+	<div class="col-sm-4 col-md-4 col-lg-4">
+		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample12" role="button" aria-expanded="false" aria-controls="collapseExample12">
+			<span style="font-size:22px";>	 lmplot 2
+			</span> </a>
+				<div class="collapse" id="collapseExample12">
+					<div class="card card-body">
+						
+					<img src="{{ url_for('static', filename='backheart/q11.png') }}" id="responsive-image"><br>
+						<p style="text-align:center; font-size: 20px;">
+							Figure 13: Linear Relationship b/w age and bloodpressure
+						</p>
+					</div>
+				</div>
+	</div>
+		
+	<div class="col-sm-4 col-md-4 col-lg-4">
+		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample13" role="button" aria-expanded="false" aria-controls="collapseExample13">
+			<span style="font-size:22px";>	lmplot 3</span> </a>
+			<div class="collapse" id="collapseExample13">
+				<div class="card card-body">
+					<img src="{{ url_for('static', filename='backheart/q12.png') }}" id="responsive-image"><br>
+						<p style="text-align:center; font-size: 20px;">
+						Figure 14:  Linear Relationship b/w age and thalach(maximum heart rate acheived)
+						</p>
+			
+				</div>
+
+			</div>
+	</div>
+</div>
+
+
+<br>
+<div class="row">
+
+	
+ 
+    <div class="col-sm-6 col-md-6 col-lg-6">
+		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample14" role="button" aria-expanded="false" aria-controls="collapseExample14">
+			<span style="font-size:22px";>	lmplot 4  </span> </a>
+				<div class="collapse" id="collapseExample14">
+					<div class="card card-body">
+						<img src="{{ url_for('static', filename='backheart/q13.png') }}" id="responsive-image"><br>
+						<p style="text-align:center; font-size: 20px;">
+							Figure 15: Linear Relationship b/w age and bloodpressure with fasting blood sugar
+						</p>
+					</div>
+				</div>
+	</div>
+		
+	<div class="col-sm-6 col-md-6 col-lg-6">
+
+	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample15" role="button" aria-expanded="false" aria-controls="collapseExample15">
+		<span style="font-size:22px";>	lmplot 5 </span> </a>
+		<div class="collapse" id="collapseExample15">
 			<div class="card card-body">
-				<img src="{{ url_for('static', filename='backheart/4.png') }}" id="responsive-image"><br>
+				<img src="{{ url_for('static', filename='backheart/q14.png') }}" id="responsive-image"><br>
 					<p style="text-align:center; font-size: 20px;">
-					Figure 8: Count Plot
+					Figure 16: Linear Relationship b/w age and bloodpressure with sex
 					</p>
 			
 			</div>
 
 		</div>
-		</div></div>
+		</div>
+</div>
+
+<br>
+
+<div class="row ">
+
+ <p style="font-size: 20px;">
+ <b>Joint Plots :-</b>	
+						</p>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample16" role="button" aria-expanded="false" aria-controls="collapseExample16">
+			<span style="font-size:22px";>	 Joint plot 1
+			</span> 
+		</a>
+				<div class="collapse" id="collapseExample16">
+					<div class="card card-body">
+						<img src="{{ url_for('static', filename='backheart/q15.png') }}" id="responsive-image"><br>
+							<p style="text-align:center; font-size: 20px;">
+								Figure 17: Joint Plot b/w age and cholestrol
+							</p>
+					</div>
+				</div>
+	</div>
+		
+	<div class="col-sm-4 col-md-4 col-lg-4">
+		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample17" role="button" aria-expanded="false" aria-controls="collapseExample17">
+			<span style="font-size:22px";>	 Joint plot 2
+			</span> </a>
+				<div class="collapse" id="collapseExample17">
+					<div class="card card-body">
+						
+					<img src="{{ url_for('static', filename='backheart/q16.png') }}" id="responsive-image"><br>
+						<p style="text-align:center; font-size: 20px;">
+							Figure 18: Joint Plot b/w age and bloodpressure
+						</p>
+					</div>
+				</div>
+	</div>
+		
+	<div class="col-sm-4 col-md-4 col-lg-4">
+		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample18" role="button" aria-expanded="false" aria-controls="collapseExample18">
+			<span style="font-size:22px";>	Joint plot 3</span> </a>
+			<div class="collapse" id="collapseExample18">
+				<div class="card card-body">
+					<img src="{{ url_for('static', filename='backheart/q17.png') }}" id="responsive-image"><br>
+						<p style="text-align:center; font-size: 20px;">
+						Figure 19:  Joint Plot b/w age and thalach(maximum heart rate acheived)
+						</p>
+			
+				</div>
+
+			</div>
+	</div>
+</div>
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
