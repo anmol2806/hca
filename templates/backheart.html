@@ -34,6 +34,7 @@ div.ex3 {
 }
 
 #responsive-image1 {  width: 80%;  max-height:600px; height: auto;}
+img.responsive-image2 {  width: 80%;  max-height:500px; height: auto;}
 #responsive-image {  width: 90%;  height: auto;
 padding-left:10px }
 img{width: 90%;  height: auto;
@@ -110,7 +111,7 @@ padding-left:10px
 <div class="row ">
 <h2>
 Exploratory Data Analysis (EDA)</h2>
- <p style="font-size: 20px;">
+ <p style="font-size: 20px;width:60%">
  <b>Plotting univariate distributions :-</b>
 								The most convenient way to take a quick look at a univariate distribution
 								in seaborn is the distplot() function. By default, this will draw a histogram 
@@ -163,8 +164,8 @@ Exploratory Data Analysis (EDA)</h2>
 </div>
 
 <br>
-		
-<p style="text-align:center; font-size: 20px;">
+<div>		
+<p style=" font-size: 20px;width:60%">
 	<b>Visualizing pairwise relationships in a dataset :-</b>
 		To plot multiple pairwise bivariate distributions in a dataset, 
 		we have used the pairplot() function. This creates a matrix of axes and shows the 
@@ -182,12 +183,12 @@ Exploratory Data Analysis (EDA)</h2>
 				</div>
 		</div>
 </p>	
-
+</div>
 
 
 <div class="row">
 
-	<p style="font-size: 20px;">
+	<p style="font-size: 20px;width:60%">
 		<b>Plots with categorical data :-</b>
 		In a strip plot, the scatterplot points will usually overlap. 
 		This makes it difficult to see the full distribution of data. 
@@ -229,7 +230,7 @@ Exploratory Data Analysis (EDA)</h2>
 <br>
 <div class="row ">
 
- <p style="font-size: 20px;">
+ <p style="font-size: 20px;width:60%">
  <b>Bar Plots :-</b>	A familiar style of plot that accomplishes this goal is a bar plot. In seaborn, 
 						the barplot() function operates on a full dataset and shows an arbitrary estimate, 
 						using the mean by default. When there are multiple observations in each category,
@@ -294,9 +295,9 @@ Exploratory Data Analysis (EDA)</h2>
 
 <div class="row ">
 
- <p style="font-size: 20px;">
- <b>Linear Regression Plots :-</b>	lmplot() is one of the most widely used function to quickly plot
- the Linear Relationship b/w 2 variables
+ <p style="font-size: 20px;width:60%">
+ <b>Linear Regression Plots :-</b>	The lineplot (lmplot) is one of the most basic plots.It shows a line on a 2 dimensional plane.
+ lmplot() is one of the most widely used function to quickly plot the Linear Relationship b/w 2 variables.  
 						</p>
     <div class="col-sm-4 col-md-4 col-lg-4">
 		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample11" role="button" aria-expanded="false" aria-controls="collapseExample11">
@@ -350,7 +351,7 @@ Exploratory Data Analysis (EDA)</h2>
 
 	
  
-    <div class="col-sm-6 col-md-6 col-lg-6">
+    <div class="col-sm-4 col-md-4 col-lg-4">
 		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample14" role="button" aria-expanded="false" aria-controls="collapseExample14">
 			<span style="font-size:22px";>	lmplot 4  </span> </a>
 				<div class="collapse" id="collapseExample14">
@@ -363,7 +364,7 @@ Exploratory Data Analysis (EDA)</h2>
 				</div>
 	</div>
 		
-	<div class="col-sm-6 col-md-6 col-lg-6">
+	<div class="col-sm-4 col-md-4 col-lg-4">
 
 	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample15" role="button" aria-expanded="false" aria-controls="collapseExample15">
 		<span style="font-size:22px";>	lmplot 5 </span> </a>
@@ -378,14 +379,17 @@ Exploratory Data Analysis (EDA)</h2>
 
 		</div>
 		</div>
+	<div class="col-sm-4 col-md-4 col-lg-4">
+	</div>
 </div>
 
 <br>
 
 <div class="row ">
 
- <p style="font-size: 20px;">
- <b>Joint Plots :-</b>	
+ <p style="font-size: 20px;width:60%">
+ <b>Joint Plots :-</b>	Jointplot is seaborn library specific and can be used to quickly visualize 
+ and analyze the relationship between two variables and describe their individual distributions on the same plot.
 						</p>
     <div class="col-sm-4 col-md-4 col-lg-4">
 		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample16" role="button" aria-expanded="false" aria-controls="collapseExample16">
@@ -433,8 +437,50 @@ Exploratory Data Analysis (EDA)</h2>
 	</div>
 </div>
 
-
 <br>
+<div class="row">
+ <p style="font-size: 20px;width:60%">
+ <b>Correlation Matrix Plots :-</b>	A correlation heatmap is a heatmap that shows a 2D correlation matrix between 
+									two discrete dimensions, using colored cells to represent data from usually a 
+									monochromatic scale. The values of the first dimension appear as the rows of the
+									table while of the second dimension as a column. The color of the cell is proportional 
+									to the number of measurements that match the dimensional value. This makes correlation 
+									heatmaps ideal for data analysis since it makes patterns easily readable and highlights
+									the differences and variation in the same data. A correlation heatmap, like a regular 
+									heatmap, is assisted by a colorbar making data easily readable and comprehensible.The 
+									stronger the color, the larger the correlation magnitude. 
+						</p>
+	
+ 
+    <div class="col-sm-6 col-md-6 col-lg-6">
+		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample19" role="button" aria-expanded="false" aria-controls="collapseExample19">
+			<span style="font-size:22px";>	Correlation Matrix Plot 1  </span> </a>
+				<div class="collapse" id="collapseExample19">
+					<div class="card card-body">
+						<img src="{{ url_for('static', filename='backheart/q18.png') }}" id="responsive-image"><br>
+						<p style="text-align:center; font-size: 20px;">
+							Figure 20: Correlation between whole dataset parameters
+						</p>
+					</div>
+				</div>
+	</div>
+		
+	<div class="col-sm-6 col-md-6 col-lg-6">
+
+	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample20" role="button" aria-expanded="false" aria-controls="collapseExample20">
+		<span style="font-size:22px";>	Correlation Matrix Plot 2 </span> </a>
+		<div class="collapse" id="collapseExample20">
+			<div class="card card-body">
+				<img src="{{ url_for('static', filename='backheart/q19.png') }}" id="responsive-image"><br>
+					<p style="text-align:center; font-size: 20px;">
+					Figure 21: Correlation between dataset parameters used
+					</p>
+			
+			</div>
+
+		</div>
+		</div>
+</div>
 
 
 
@@ -457,14 +503,16 @@ Exploratory Data Analysis (EDA)</h2>
 
 
 
-<p style="text-align:center;">
-	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
+<p style="font-size: 20px;width:60%">
+ <h2><b>Implementating Machine Learning :-</b>	</h2>
+						
+	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample21" role="button" aria-expanded="false" aria-controls="collapseExample21">
 		<span style="font-size:22px";>Splitting Dataset</span>  </a>
-		<div class="collapse" id="collapseExample3">
+		<div class="collapse" id="collapseExample21">
 			<div class="card card-body">
 				<img src="{{ url_for('static', filename='backheart/5.png') }}" id="responsive-image"><br>
 					<p style="text-align:center; font-size: 20px;">
-					Figure 4: Splitting Dataset for Applying Machine Learning Algorithm
+					Figure 22: Splitting Dataset for Applying Machine Learning Algorithm
 					</p>
 		  	</div>
 		</div>
@@ -479,7 +527,7 @@ Exploratory Data Analysis (EDA)</h2>
 <p style="text-align:center; font-size: 35px;color: white;">
 					<b>Choosing Best Machine Learning Algorithm Based on Accuracy Score</b>
 					</p>
-					<img id="image" src="/static/backheart/mlalgo.jpg" id="responsive-image"/><br>
+					<img id="image" src="/static/backheart/mlalgo.jpg" class="responsive-image2"/><br>
 					<p style="text-align:center;">
 					
 <select id="AlgoList">
