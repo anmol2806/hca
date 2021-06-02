@@ -11,7 +11,7 @@ import csv
 #import sklearn.external.joblib as extjoblib
 import joblib
 from sklearn.preprocessing import StandardScaler
-import diseaseprediction
+#import diseaseprediction
 
 
 
