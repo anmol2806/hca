@@ -344,7 +344,30 @@ def results():
     # return render_template('disease_predict.html',disease_list=disease_list)
  #   disease = diseaseprediction.dosomething(selected_symptoms)
  #   return render_template('disease_predict.html',disease=disease,symptoms=symptoms)
+# ===================
+#   Heart Disease Page
+# ===================    
+@app.route('/cardio')
+def homehea():
+    return render_template("indexheart.html")
+# Always at end of file !Important!
 
+@app.route('/cardio/predict',methods=['POST','GET'])
+def predictcard():
+    # receive the values send by user in three text boxes thru request object -> requesst.form.values()
+    
+    int_features = [float(x) for x in request.form.values()]
+    final_features = [np.array(int_features)]
+    print(final_features)
+       
+    prediction1=logit_model.predict(final_features)
+    if prediction1 == 1:
+        pred = "You have Heart Disease, please consult a Doctor."
+    elif prediction1 == 0:
+        pred = "You don't have Heart Disease."
+    output = pred
+   
+    return render_template('indexheart.html', pred= '{}'.format(output))
 
 
  
