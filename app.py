@@ -19,10 +19,13 @@ app = Flask(__name__)
 app.secret_key = "Secret Key"
 # load the saved model file and use for prediction
 logit_model = joblib.load('heart_disease.pkl')
+
 logit_model_diabetes = joblib.load('dt_model_diabetes.pkl')
 logit_model_bmi=joblib.load(open('clf.pkl','rb'))
 model = pickle.load(open('model.pkl', 'rb'))
 scaler = pickle.load(open('scaler.pkl', 'rb'))
+
+svm_model = joblib.load('svm_model2.pkl')
 
 
 
@@ -344,12 +347,14 @@ def results():
     # return render_template('disease_predict.html',disease_list=disease_list)
  #   disease = diseaseprediction.dosomething(selected_symptoms)
  #   return render_template('disease_predict.html',disease=disease,symptoms=symptoms)
+
+
 # ===================
 #   Heart Disease Page
 # ===================    
 @app.route('/cardio')
 def homehea():
-    return render_template("indexheart.html")
+    return render_template("indexheartnew.html")
 # Always at end of file !Important!
 
 @app.route('/cardio/predict',methods=['POST','GET'])
@@ -360,14 +365,14 @@ def predictcard():
     final_features = [np.array(int_features)]
     print(final_features)
        
-    prediction1=logit_model.predict(final_features)
+    prediction1=svm_model.predict(final_features)
     if prediction1 == 1:
         pred = "You have Heart Disease, please consult a Doctor."
     elif prediction1 == 0:
         pred = "You don't have Heart Disease."
     output = pred
    
-    return render_template('indexheart.html', pred= '{}'.format(output))
+    return render_template('indexheartnew.html', pred= '{}'.format(output))
 
 
  
