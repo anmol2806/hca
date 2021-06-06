@@ -86,9 +86,9 @@ padding-left:10px
 
 
 <p style="text-align:center;">
-	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
+	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample3">
 		<span style="font-size:22px";>Splitting Dataset</span>  </a>
-		<div class="collapse" id="collapseExample3">
+		<div class="collapse" id="collapseExample2">
 			<div class="card card-body">
 				<img src="{{ url_for('static', filename='backbmi/4.png') }}" id="responsive-image"><br>
 					<p style="text-align:center; font-size: 20px;">
@@ -100,6 +100,174 @@ padding-left:10px
 
 
 </div>
+
+<div class="row ">
+<h2>
+      Exploratory Data Analysis (EDA)</h2>
+ <p style="font-size: 20px;width:60%">
+ <b> Plotting univariate distributions :-</b>
+								The most convenient way to take a quick look at a univariate distribution
+								in seaborn is the distplot() function. By default, this will draw a histogram 
+								and fit a kernel density estimate (KDE).
+						</p>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample2">
+			<span style="font-size:22px";>  Gender Distribution
+			</span> 
+		</a>
+				<div class="collapse" id="collapseExample3">
+					<div class="card card-body">
+						<img src="{{ url_for('static', filename='backbmi/backbmi gender.png') }}" id="responsive-image"><br>
+							<p style="text-align:center; font-size: 20px;">
+								Figure 4: Gender Distribution Plot
+							</p>
+					</div>
+				</div>
+	</div>
+		
+	<div class="col-sm-4 col-md-4 col-lg-4">
+		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4">
+			<span style="font-size:22px";>	Height Distribution 
+			</span> </a>
+				<div class="collapse" id="collapseExample4">
+					<div class="card card-body">
+						
+					<img src="{{ url_for('static', filename='backbmi/backbmi height.png') }}" id="responsive-image"><br>
+						<p style="text-align:center; font-size: 20px;">
+							Figure 5: Height Distribution Plot
+						</p>
+					</div>
+				</div>
+	</div>
+		
+	<div class="col-sm-4 col-md-4 col-lg-4">
+		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample5">
+			<span style="font-size:22px";>Weight Distribution  </span> </a>
+			<div class="collapse" id="collapseExample5">
+				<div class="card card-body">
+					<img src="{{ url_for('static', filename='backbmi/backbmi weight.png') }}" id="responsive-image"><br>
+						<p style="text-align:center; font-size: 20px;">
+						Figure 6:  Weight Distribution Plot
+						</p>
+			
+				</div>
+
+			</div>
+	</div>
+</div>
+<br>
+
+<div class="row">
+
+	<p style="font-size: 20px;width:60%">
+		<b>Plots with categorical data :-</b>
+		In a strip plot, the scatterplot points will usually overlap. 
+		This makes it difficult to see the full distribution of data. 
+		One easy solution is to adjust the positions (only along the categorical axis) using some random “jitter"<br>
+		A different approach would be to use the function swarmplot(), which positions each scatterplot point on 
+		the categorical axis with an algorithm that avoids overlapping points
+	</p>
+ 
+    <div class="col-sm-6 col-md-6 col-lg-6">
+		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample6" role="button" aria-expanded="false" aria-controls="collapseExample6">
+			<span style="font-size:22px";>	Strip Plot  </span> </a>
+				<div class="collapse" id="collapseExample6">
+					<div class="card card-body">
+						<img src="{{ url_for('static', filename='backbmi/backbmi strip.png') }}" id="responsive-image"><br>
+						<p style="text-align:center; font-size: 20px;">
+							Figure 7: Strip Plot between Weight and Gender
+						</p>
+					</div>
+				</div>
+	</div>
+		
+	<div class="col-sm-6 col-md-6 col-lg-6">
+
+	<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample7" role="button" aria-expanded="false" aria-controls="collapseExample7">
+		<span style="font-size:22px";>	Swarm Plot  </span> </a>
+		<div class="collapse" id="collapseExample7">
+			<div class="card card-body">
+				<img src="{{ url_for('static', filename='backbmi/backbmi swarm.png') }}" id="responsive-image"><br>
+					<p style="text-align:center; font-size: 20px;">
+					Figure 8: Swarm Plot between Weight and Gender
+					</p>
+			
+			</div>
+
+		</div>
+		</div>
+</div>
+
+<br>
+
+<div class="row ">
+
+ <p style="font-size: 20px;width:60%">
+ <b>Linear Regression Plots :-</b>	The lineplot (lmplot) is one of the most basic plots.It shows a line on a 2 dimensional plane.
+    lmplot() is one of the most widely used function to quickly plot the Linear Relationship b/w 2 variables.  
+						</p>
+    <div class="col-sm-6 col-md-6 col-lg-6">
+		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample8" role="button" aria-expanded="false" aria-controls="collapseExample8">
+			<span style="font-size:22px";>	 lmplot 1
+			</span> 
+		</a>
+				<div class="collapse" id="collapseExample8">
+					<div class="card card-body">
+						<img src="{{ url_for('static', filename='backbmi/backbmi l1.png') }}" id="responsive-image"><br>
+							<p style="text-align:center; font-size: 20px;">
+								Figure 9: Linear Relationship B/W BMI between Height
+							</p>
+					</div>
+				</div>
+	</div>
+		
+	<div class="col-sm-6 col-md-6 col-lg-6">
+		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample9" role="button" aria-expanded="false" aria-controls="collapseExample9">
+			<span style="font-size:22px";>	 lmplot 2
+			</span> </a>
+				<div class="collapse" id="collapseExample9">
+					<div class="card card-body">
+						
+					<img src="{{ url_for('static', filename='backbmi/backbmi l2.png') }}" id="responsive-image"><br>
+						<p style="text-align:center; font-size: 20px;">
+							Figure 10: Linear Relationship b/w Weight and Height
+						</p>
+					</div>
+				</div>
+	</div>
+</div>
+
+<br>
+<div class="row">
+ <p style="font-size: 20px;width:60%">
+ <b>Correlation Matrix Plots :-</b>	A correlation heatmap is a heatmap that shows a 2D correlation matrix between 
+									two discrete dimensions, using colored cells to represent data from usually a 
+									monochromatic scale. The values of the first dimension appear as the rows of the
+									table while of the second dimension as a column. The color of the cell is proportional 
+									to the number of measurements that match the dimensional value. This makes correlation 
+									heatmaps ideal for data analysis since it makes patterns easily readable and highlights
+									the differences and variation in the same data. A correlation heatmap, like a regular 
+									heatmap, is assisted by a colorbar making data easily readable and comprehensible.The 
+									stronger the color, the larger the correlation magnitude. 
+						</p>
+	
+ 
+    <div class="col-sm-6 col-md-6 col-lg-6">
+		<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample14" role="button" aria-expanded="false" aria-controls="collapseExample19">
+			<span style="font-size:22px";>	Correlation Matrix Plot   </span> </a>
+				<div class="collapse" id="collapseExample14">
+					<div class="card card-body">
+						<img src="{{ url_for('static', filename='backbmi/backbmi corr.png') }}" id="responsive-image"><br>
+						<p style="text-align:center; font-size: 20px;">
+							Figure 11: Correlation between whole dataset parameters
+						</p>
+					</div>
+				</div>
+	</div>
+	
+</div>
+<br>
+	
 
 
 
