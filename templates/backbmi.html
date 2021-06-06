@@ -19,7 +19,11 @@
 
 
 <style>
-
+div.ex2 {
+  
+  padding: 25px;
+  
+}
 
 div.ex3 {
 	background-image:url("{{ url_for('static', filename='background_1.jpg') }}");
@@ -42,7 +46,7 @@ padding-left:10px
 
 
 
-<div class="ex3 " >
+<div class="ex3 ex2" >
 
 
 
@@ -99,7 +103,7 @@ padding-left:10px
 </p>
 
 
-</div>
+
 
 <div class="row ">
 <h2>
@@ -304,6 +308,6 @@ function setalgo() {
 }
 document.getElementById("AlgoList").onchange = setalgo;
 </script>
-
+</div>
  </div>
 {% endblock %}

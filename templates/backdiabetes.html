@@ -19,7 +19,11 @@
 
 
 <style>
-
+div.ex2 {
+  
+  padding: 25px;
+  
+}
 
 div.ex3 {
 	background-image:url("{{ url_for('static', filename='diabetes_2.jpg') }}");
@@ -33,13 +37,15 @@ padding-left:10px }
 img{width: 90%;  height: auto;
 padding-left:10px
 }
+#responsive-image1 {  width: 70%;  height: auto;max-height:300px;
+padding-left:10px }
 </style>
 
 <img src="/static/backdiabetes/112.png" id="responsive-image">
 
 
 
-<div class="ex3 " >
+<div class="ex3 ex2" >
 
 
 
@@ -85,7 +91,7 @@ padding-left:10px
 		<span style="font-size:22px";>Choosing Columns</span>  </a>
 		<div class="collapse" id="collapseExample2">
 			<div class="card card-body">
-				<img src="/static/backdiabetes/columns.png" id="responsive-image"><br>
+				<img src="/static/backdiabetes/columns.png" id="responsive-image1"><br>
 					<p style="text-align:center; font-size: 20px;">
 					Figure 3: Choosing Columns for Machine Learning Algorithm
 					</p>
@@ -107,7 +113,7 @@ padding-left:10px
 </p>
 
 
-</div>
+
 
 
 <div class="row ">
@@ -384,6 +390,6 @@ function setalgo() {
 }
 document.getElementById("AlgoList").onchange = setalgo;
 </script>
-
+</div>
  </div>
 {% endblock %}
