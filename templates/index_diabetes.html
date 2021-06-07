@@ -97,7 +97,7 @@ Glucose then stays in your blood and doesn’t reach your cells.</p>
 
 </div>
  <div class="login" >
-	<h1>Diabetes Predictor</h1>
+	<h1 style="color:black;background: #1abc9c;padding: 10px;">Diabetes Predictor</h1>
 
      
     <form action="{{ url_for('predict2')}}"method="post">
@@ -125,8 +125,9 @@ Glucose then stays in your blood and doesn’t reach your cells.</p>
     </form>
 
    <br>
-   <br>
-   {{ prediction_text }}
+   
+   <h2 style="color:black;background: #1abc9c;padding: 10px;"> {{ prediction_text }} </h2>
+   
 
  
 </div>
