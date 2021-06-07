@@ -3,4 +3,4 @@
 Machine Learning And EDA project made in FLask
 
 Login Page:- 
-<img sr="">
+<img src="https://github.com/anmol2806/pictures/blob/main/login.png">
