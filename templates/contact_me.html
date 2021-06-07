@@ -7,95 +7,80 @@ Contact Us
 {% block content %}
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-	<style> 
-	.fa {  
-  padding: 20px;  
-text-align: center;  
-  margin: 5px 2px;  
-  font-size: 30px;  
-  width: 50px;  
-}  
-.fa-facebook {  
-  background: #3B5998;  
-  color: white;  
-}  
-.fa-twitter {  
-  background: #55ACEE;  
-  color: white;  
-}  
-.fa-pinterest {  
-  background: #cb2027;  
-  color: white;  
-}  
-.fa-linkedin {  
-  background: #007bb5;  
-  color: white;  
-}  
-.fa-instagram {  
-  background: #125688;  
-  color: white;  
-}  
-.fa-youtube {  
-  background: #bb0000;  
-  color: white;  
-}  
-.fa-google {  
-  background: #dd4b39;  
-  color: white;  
-}  
-.fa-snapchat-ghost {  
-  background: #fffc00;  
-  color: white;  
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;  
-}  
-.fa-skype {  
-  background: #00aff0;  
-  color: white;  
-}  
-.fa:hover {  
-    opacity: 0.9;  
-}  
-		#leftbox {
-		 
-                float:left; 
-                width:50%;
-               background-image:url("{{ url_for('static', filename='background_8.jpg') }}");
-    background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-            }
-        #rightbox{
-		padding: 2px; 
-                float:right;
-                width:50%;
-                background-image:url("{{ url_for('static', filename='background_8.jpg') }}");
-    background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-            }
-			
-			div.ex2 {
-  
-  padding: 5px;
-  
-}
-div.ex4 {
-	background-image:url("{{ url_for('static', filename='background_8.jpg') }}");
-    background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-}
-img {text-align: center;}
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
- 
-}
-h2 {text-align: center;}
-p {text-align: center;}
+<style> 
+.fa {  
+	  padding: 20px;  
+	text-align: center;  
+	  margin: 5px 2px;  
+	  font-size: 30px;  
+	  width: 50px;  
+	}  
+.fa-facebook 
+	{  
+	  background: #3B5998;  
+	  color: white;  
+	}  
 
-	mark{ background-color:red;}
+.fa-linkedin
+	{  
+	  background: #007bb5;  
+	  color: white;  
+	}  
+.fa-instagram 
+	{  
+	  background: #125688;  
+	  color: white;  
+	}  
+  
+.fa:hover
+	{  
+		opacity: 0.9;  
+	}  
+#leftbox 
+	{
+		float:left; 
+        width:50%;
+    }
+#rightbox
+	{
+		padding: 2px; 
+        float:right;
+        width:50%;
+    }
+			
+div.ex2 
+	{
+		padding: 5px;
+	}
+  
+div.ex4 
+	{
+		background-image:url("{{ url_for('static', filename='contact2.jpg') }}");
+		background-repeat: no-repeat;
+	    background-attachment: fixed;
+	    background-size: 100% 100%;
+	}
+img 
+	{
+		text-align: center;
+	}
+.center 
+	{
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+	 
+	}
+h2 
+	{
+		text-align: center;
+		}
+p 	
+	{
+		text-align: center;
+		}
+
+mark{ background-color:red;}
 
 	
     </style> 
@@ -134,14 +119,15 @@ p {text-align: center;}
 	 
 	 
 
-	  <h2 style="color: white ;">Anmol Nagpal </h2>
-           	<img src="/static/Anmol_pi_wobg.png", width= "200px", length=" 400px"  alt="Paris" class="center"></img>
-            <p style="color: white ;"><mark>CO17507</mark><br>
-										<mark> ECE 8th Semester <br>
-										CCET</mark><br>
-            <a href="https://www.linkedin.com/in/anmolnagpal28/" class="fa fa-linkedin" ></a>
-			<a href="https://www.facebook.com/anmol.nagpal.5494/" class="fa fa-facebook"> </a>  
-			<a href="https://www.instagram.com/anmol28.an/" class="fa fa-instagram"> </a>   </p>
+	<h2 style="color: white ;">Anmol Nagpal </h2>
+    <img src="/static/Anmol_pi_wobg.png", width= "200px", length=" 400px"  alt="Paris" class="center"></img>
+    <p style="color: white ;">
+		<mark>CO17507</mark><br>
+		<mark> ECE 8th Semester <br> CCET</mark><br>
+		<a href="https://www.linkedin.com/in/anmolnagpal28/" class="fa fa-linkedin" ></a>
+		<a href="https://www.facebook.com/anmol.nagpal.5494/" class="fa fa-facebook"> </a>  
+		<a href="https://www.instagram.com/anmol28.an/" class="fa fa-instagram"> </a>  
+	</p>
 	 
 	 
 </div>
