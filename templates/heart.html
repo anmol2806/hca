@@ -36,7 +36,7 @@ div.ex2 {
 
 
 <div class="ex2 ex3 " style="color: white">
-
+ <br><h2 style="color:black"> <mark>{{pred}} </mark></h2><br> 
 
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -113,7 +113,7 @@ Factors that put people at increased risk for heart disease are:
 <br>
 
 
-<a href="/heartdata"> <b>Dataset used</b></a>
+<a href="/heartdata"> <b>Dataset used</b></a><br>
 <a href="/backheartdata"> <b>backend used</b></a>
 <br>
 
@@ -248,92 +248,67 @@ Serum cholesterol levels also show the amount of triglycerides present. Triglyce
        
 		
 	<div class="container bg-dark text-white">	
-    <form action='/cardio/predict' method="post">
+    <form action='/heart/predict' method="post">
       <table class="table table-dark ">
 	  
 		<tr class="table-primary"><td> <b><mark>Age</mark> </b></td>
-			<td>  <input  name="age"  placeholder="Age (in years) " ></td>
+			<td>  <input  name="age"  placeholder="Age (above 45 years) " ></td>
         </tr>
 		
         <tr class="table-success"><td> <b><mark> Sex</mark></b></td>
             <td>
 		
-  <input type="radio" id="gender" name="gender" value=1>
-  <label for="gender"><mark>Female </mark></label><br>
-   <input type="radio" id="gender" name="gender" value=2>
-  <label for="gender"><mark>Male </mark></label><br> </td>
+  <input type="radio" id="sex" name="sex" value=0>
+  <label for="sex"><mark>Female </mark></label><br>
+   <input type="radio" id="sex" name="sex" value=1>
+  <label for="sex"><mark>Male </mark></label><br> </td>
 		</tr>
-		
-		<tr class="table-primary"><td> <b><mark>Height</mark> </b></td>
-			<td>  <input  name="height"  placeholder="height (in cms) " ></td>
-        </tr>
-		
-		<tr class="table-primary"><td> <b><mark>Weight</mark> </b></td>
-			<td>  <input  name="weight"  placeholder="Weight (in kgs) " ></td>
-        </tr>
 				
-	
+		<tr class="table-danger"><td> <b><mark>Chest pain type</mark></b></td>
+			<td>  
+			<input type="radio" id="cp" name="cp" value=0>
+  <label for="cp"><mark>0 = typical angina  </mark></label><br>
+   <input type="radio" id="cp" name="cp" value=1>
+  <label for="cp"><mark>1 = atypical angina </mark></label><br> 
+		<input type="radio" id="cp" name="cp" value=2>
+  <label for="cp"><mark>2 = non-anginal pain </mark></label><br>
+   <input type="radio" id="cp" name="cp" value=3>
+  <label for="cp"><mark> 3 = asymptomatic  </mark></label><br> </td>	
+		 </tr >
 		 
-        <tr class="table-active"><td><b> <mark>Systolic blood pressure</mark></b></td>
-            <td>  <input  name="ap_hi" placeholder="high blood pressure" > </td>
-		</tr>
-		<tr class="table-active"><td><b> <mark>Diastolic blood pressure</mark></b></td>
-            <td>  <input  name="ap_lo" placeholder="low blood pressure" > </td>
+        <tr class="table-active"><td><b> <mark>Resting blood pressure</mark></b></td>
+            <td>  <input  name="trestbps" placeholder="resting blood pressure" > </td>
 		</tr>
 		
-			<tr class="table-danger"><td> <b><mark>Serum cholestoral</mark></b></td>
-			<td>  
+		<tr class="table-active"><td> <b><mark>Serum cholestoral</mark></b> </td>
+		
+            <td>  <input  name="chol" placeholder="serum cholestoral (in mg/dl)" > </td>
+		</tr>
+		
+		<tr class="table-active"><td><b> <mark>fbs </mark></b></td>
+            <td>  <input type="radio" id="fbs" name="fbs" value=0>
+  <label for="fbs"> <mark> less than 120 mg/dl  </mark></label><br>
+   <input type="radio" id="fbs" name="fbs" value=1>
+  <label for="fbs"> <mark>greater than 120 mg/dl  </mark></label><br></td>
 			
-   <input type="radio" id="cholesterol" name="cholesterol" value=1>
-  <label for="cholesterol"><mark>1: normal </mark></label><br> 
-		<input type="radio" id="cholesterol" name="cholesterol" value=2>
-  <label for="cholesterol"><mark>2: above normal  </mark></label><br>
-   <input type="radio" id="cholesterol" name="cholesterol" value=3>
-  <label for="cholesterol"><mark> 3: well above normal </mark></label><br> </td>	
-		 </tr >
+			</tr>
 		
-		
-		<tr class="table-danger"><td> <b><mark>Glucose</mark></b></td>
-			<td>  
-			
-   <input type="radio" id="gluc" name="gluc" value=1>
-  <label for="gluc"><mark>1: normal </mark></label><br> 
-		<input type="radio" id="gluc" name="gluc" value=2>
-  <label for="gluc"><mark>2: above normal  </mark></label><br>
-   <input type="radio" id="gluc" name="gluc" value=3>
-  <label for="gluc"><mark> 3: well above normal </mark></label><br> </td>	
-		 </tr >
-		
-		
-	
-		
-		<tr class="table-active"><td> <b><mark>smoke</mark></b></td>
+		<tr class="table-active"><td> <b><mark>restecg</mark></b></td>
 		<td>
 		
-  <input type="radio" id="smoke" name="smoke" value=0>
-  <label for="smoke"> <mark>0  = no </mark></label><br>
-   <input type="radio" id="smoke" name="smoke" value=1>
-  <label for="smoke"> <mark>1  = yes</mark></label><br>
+  <input type="radio" id="restecg" name="restecg" value=0>
+  <label for="restecg"> <mark>0  = normal </mark></label><br>
+   <input type="radio" id="restecg" name="restecg" value=1>
+  <label for="restecg"> <mark>1  = having ST-T</mark></label><br>
    
 
 
             <!-- <input  name="restecg" placeholder="restecg (0 or 1)" > -->
 		</tr>
 		
-		
-			<tr class="table-active"><td> <b><mark>alco</mark></b></td>
-		<td>
-		
-  <input type="radio" id="alco" name="alco" value=0>
-  <label for="alco"> <mark>0  = no </mark></label><br>
-   <input type="radio" id="alco" name="alco" value=1>
-  <label for="alco"> <mark>1  = yes</mark></label><br>
-   
-
-
-            <!-- <input  name="restecg" placeholder="restecg (0 or 1)" > -->
-		</tr>
-		</table>
+		<tr class="table-active"><td> <b><mark>thalach</mark></b>  </td>
+            <td>  <input  name="thalach" placeholder="thalach" > </td>
+		</tr></table>
 		
 		
         <tr>
@@ -342,7 +317,7 @@ Serum cholesterol levels also show the amount of triglycerides present. Triglyce
 	  </table>
     </form>
        </div>
-     <br><h2 style="color:black"> <mark>{{pred}} </mark></h2><br> 
+    
 	 </div>	
 
 </div>
